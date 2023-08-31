@@ -7,6 +7,9 @@ const Index = (props) => {
         backgroundColor: '#000000',
         textAlign: 'center'
     }
+    const anchorStyle = {
+        listStyle: 'none'
+    }
 
     return(
         <main style={myStyle}>
@@ -24,7 +27,7 @@ const Index = (props) => {
                         //* Pokemon names starting with uppercase by joining both parts
                         const pokeName = firstLetter + lastPart
                         
-                        return(<li>
+                        return(<li style={anchorStyle}>
                             <a href={`/pokemon/${i}`}>{pokeName}</a>
                         </li>)
                     })
