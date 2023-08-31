@@ -29,6 +29,13 @@ app.get('/pokemon/:id', (req, res) => {
     })
 })
 
+//* Connect to the database
+mongoose.connect(process.env.MONGO_URI)
+mongoose.connection.once('open', () => {
+    console.log('Successfully connected to the database.')
+})
+
+
 app.listen(port, () => {
     console.log(`App is running on port: ${port}`)
 })
