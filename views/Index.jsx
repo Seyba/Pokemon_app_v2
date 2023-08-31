@@ -11,6 +11,11 @@ const Index = (props) => {
         listStyle: 'none'
     }
 
+    const pokeStyle = {
+        fontSize: '20px',
+        color: '#ffffff',
+        textDecoration: 'none'
+    }
     return(
         <main style={myStyle}>
             <h1>See All The Pokemon!!</h1>
@@ -28,7 +33,7 @@ const Index = (props) => {
                         const pokeName = firstLetter + lastPart
                         
                         return(<li style={anchorStyle}>
-                            <a href={`/pokemon/${i}`}>{pokeName}</a>
+                            <a style={pokeStyle} href={`/pokemon/${i}`}>{pokeName}</a>
                         </li>)
                     })
                 }
