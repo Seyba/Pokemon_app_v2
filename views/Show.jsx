@@ -21,7 +21,6 @@ const Show = props => {
     const imgStyle={
         marginBottom: '18px'
     }
-
     const { name, img } = props.pokemon
     //* Capitalizing the first letter
     const firstLetter = name.charAt(0).toUpperCase()

@@ -21,8 +21,8 @@ const Index = (props) => {
             <h1>See All The Pokemon!!</h1>
             <ul>
                 {
-                    pokemon.map((poke, i) => {
-                        const {name} = poke
+                    pokemon.map((poke) => {
+                        const {name, _id} = poke
                         //* Capitalizing the first letter
                         const firstLetter = name.charAt(0).toUpperCase()
 
@@ -32,8 +32,8 @@ const Index = (props) => {
                         //* Pokemon names starting with uppercase by joining both parts
                         const pokeName = firstLetter + lastPart
                         
-                        return(<li style={anchorStyle}>
-                            <a style={pokeStyle} href={`/pokemon/${i}`}>{pokeName}</a>
+                        return(<li key={_id} style={anchorStyle}>
+                            <a style={pokeStyle} href={`/pokemon/${_id}`}>{pokeName}</a>
                         </li>)
                     })
                 }
